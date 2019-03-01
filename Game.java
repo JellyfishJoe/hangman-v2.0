@@ -17,7 +17,8 @@ public class Game{
 		System.out.println(targetWord);
 		System.out.println(targetWordLength);
 
-		this.currentState = "_".repeat(targetWordLength);
+		String placeholder = "_";
+		this.currentState = placeholder.repeat(targetWordLength);
 		System.out.println(currentState);
 	}
 
