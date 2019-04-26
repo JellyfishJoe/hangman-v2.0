@@ -18,11 +18,14 @@ public class Game{
 		System.out.println(targetWordLength);
 
 		String placeholder = "_";
-		this.currentState = placeholder.repeat(targetWordLength);
+		currentState = placeholder;
+		for(int i = 1; i < targetWordLength; i++){
+			currentState += placeholder;
+		}
 		System.out.println(currentState);
 	}
 
 	public void doStep(){
-
+		Guesser ai = new Guesser();
 	}
 }

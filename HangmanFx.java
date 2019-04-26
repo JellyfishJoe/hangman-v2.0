@@ -41,8 +41,8 @@ public class HangmanFx extends Application {
 		pane.setHgap(10);
 
 		//set an action on the button using method reference
-		submit.setOnAction(this::doSubmission);
-		go.setOnAction(this::doContinuation);
+		submit.setOnAction(this::doSubmit);
+		go.setOnAction(this::doStep);
 
 		//add the fields into the pane
 		pane.add(input, 0, 0);
@@ -61,7 +61,7 @@ public class HangmanFx extends Application {
 		stage.show();
 	}
 
-	private void doSubmission(ActionEvent event){
+	private void doSubmit(ActionEvent event){
 		//grab input text from input field
 		this.word = this.input.getText();
 
@@ -71,9 +71,9 @@ public class HangmanFx extends Application {
 		//todo: add code to update display
 	}
 
-	private void doContinuation(ActionEvent event){
+	private void doStep(ActionEvent event){
 		//continue on to next guess
-		this.hangmanGame.doStep();
+		this.hangmanGame.doStep();//shouldn't do this, Game class should keep game running and just send update date to FX class
 
 		//todo: add code to update display
 	}
