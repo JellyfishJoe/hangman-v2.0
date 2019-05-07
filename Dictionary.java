@@ -20,11 +20,7 @@ public class Dictionary{
 		}
 	}
 
-	public void removeLength(int length){
-		for(String word : words){
-			if(word.length() != length){
-				words.remove(word);
-			}
-		}
+	public void replace(List<String> newWords){
+		words = newWords;
 	}
 }
